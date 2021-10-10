@@ -1,16 +1,17 @@
-## recherche duckduck go sur le terminal
+# duckduckgo search
 alias ddg="ddgr -r fr-fr -x -n 5 --unsafe"
 
-## matrix
+# matrix
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 alias matrixBinarie='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;'
 
-## film starwars sur le terminal
+# starwars movie
 alias starwars="telnet towel.blinkenlights.nl"
 
-## message de bienvenue
+# welcome message
 alias welcome='animal=("meow" "turtle" "stegosaurus"); fortune | cowsay -f ${animal[$RANDOM % ${#animal[@]} ]} | lolcat'
 
+# alias
 alias als='xed ~/.bash_aliases'
 alias reload='source ~/.bashrc'
 
@@ -18,18 +19,19 @@ alias reload='source ~/.bashrc'
 alias localip='hostname -I'
 alias pubip='curl ifconfig.io'
 
-# répertoire
+# directory
 alias ..='cd ../'
 alias www='cd /var/www'
 alias dls='cd ~/Téléchargements'
 alias dsk='cd ~/Bureau'
 
+# clip
 alias clip='copyq add -'
 
-# droit
+# right
 alias amoi='sudo chown $USER:$USER'
 
-# recerche
+# search
 alias hg='history |grep'
 alias fhere="sudo find . -type f -name"
 
@@ -47,13 +49,14 @@ alias aptlup='sudo apt list --upgradable'
 # hosts
 alias edithost="sudo xed /etc/hosts"
 
-# batterie
+# battery
 alias bat='upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"'
 
-## mp3 ou mp4 d'une video youtube
+# mp3 or mp4 of youtube video
 alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 -i"
 alias yt-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -i"
 
+# speedtest
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
 
 # some more ls aliases
