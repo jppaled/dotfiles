@@ -65,9 +65,10 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 #alias l="ls -l"
 #alias la="ls -a"
 
+# ls with exa
 alias ll="exa -abghl"
 alias l="exa -bghl"
 alias la="exa -a"
 
-
+# rainbow ps1
 export PS1="\[$(tput bold)\]\[\033[38;5;124m\][\[$(tput bold)\]\[\033[38;5;172m\]\u\[$(tput bold)\]\[\033[38;5;106m\]@\[$(tput bold)\]\[\033[38;5;38m\]\h\[$(tput bold)\]:\[$(tput bold)\]\[$(tput bold)\]\[\033[38;5;176m\]\w\[$(tput bold)\]\[\033[38;5;124m\]]\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
