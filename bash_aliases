@@ -35,17 +35,6 @@ alias amoi='sudo chown $USER:$USER'
 alias hg='history |grep'
 alias fhere="sudo find . -type f -name"
 
-# apt
-alias apti='sudo apt install'
-alias aptu='sudo apt update'
-alias aptp='sudo apt purge'
-alias apts='sudo apt search'
-alias aptar='sudo apt autoremove'
-alias aptac='sudo apt autoclean'
-alias aptl='sudo apt list'
-alias aptupgr='sudo apt list upgrade'
-alias aptlup='sudo apt list --upgradable'
-
 # hosts
 alias edithost="sudo xed /etc/hosts"
 
