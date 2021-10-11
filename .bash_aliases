@@ -1,5 +1,5 @@
 # duckduckgo search
-alias ddg="ddgr -r fr-fr -x -n 5 --unsafe"
+alias ddg='ddgr -r fr-fr -x -n 5 --unsafe'
 
 # matrix
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
@@ -139,7 +139,7 @@ function color_my_prompt {
 }
 
 # rainbow ps1 with git
-color_my_prompt
+#color_my_prompt
 
 # rainbow ps1
-#export PS1="\[$(tput bold)\]\[\033[38;5;124m\][\[$(tput bold)\]\[\033[38;5;172m\]\u\[$(tput bold)\]\[\033[38;5;106m\]@\[$(tput bold)\]\[\033[38;5;38m\]\h\[$(tput bold)\]:\[$(tput bold)\]\[$(tput bold)\]\[\033[38;5;176m\]\w\[$(tput bold)\]\[\033[38;5;124m\]]\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[\033[38;5;124m\][\[$(tput bold)\]\[\033[38;5;172m\]\u\[$(tput bold)\]\[\033[38;5;106m\]@\[$(tput bold)\]\[\033[38;5;38m\]\h\[$(tput bold)\]:\[$(tput bold)\]\[$(tput bold)\]\[\033[38;5;176m\]\w\[$(tput bold)\]\[\033[38;5;124m\]]\[\033[38;5;106m\]\$(parse_git_branch)\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
