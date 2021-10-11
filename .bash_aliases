@@ -59,6 +59,10 @@ convertToMp4 () {
 #alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
+
+# diff
+alias diff='diff --color=auto'
+
 # some more ls aliases
 #alias ls='ls -GFh --color=auto'
 #alias ll="ls -alF"
