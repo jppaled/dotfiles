@@ -131,7 +131,7 @@ function color_my_prompt {
     local __crochet_fermer="$red]"
     #local __git_branch="$(git_status_color)\$(parse_git_branch)"
     local __git_branch="$green\$(parse_git_branch)"
-    local __dollar="$white\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
+    local __dollar="\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
     #local __git_branch="$yellow$(__git_ps1)\[$(tput sgr0)\]"
 
