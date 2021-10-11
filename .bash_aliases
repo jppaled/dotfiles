@@ -25,7 +25,7 @@ alias www='cd /var/www'
 alias dls='cd ~/Téléchargements'
 alias dsk='cd ~/Bureau'
 alias dox='cd ~/Documents'
-alias dev='~/dev'
+alias dev='cd ~/dev'
 
 # clip
 alias clip='copyq add -'
