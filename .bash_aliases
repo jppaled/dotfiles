@@ -64,10 +64,7 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias diff='diff --color=auto'
 
 # some more ls aliases
-#alias ls='ls -GFh --color=auto'
-#alias ll="ls -alF"
-#alias l="ls -l"
-#alias la="ls -a"
+alias ls='ls -GFh --color=auto'
 
 # ls with exa
 alias ll="exa -abghl"
