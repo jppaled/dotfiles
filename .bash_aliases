@@ -1,5 +1,5 @@
 # duckduckgo search
-alias ddg='ddgr -r fr-fr -x -n 5 --unsafe'
+alias ddg="ddgr -r fr-fr -x -n 5 --unsafe"
 
 # matrix
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
@@ -12,7 +12,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias welcome='animal=("meow" "turtle" "stegosaurus"); fortune | cowsay -f ${animal[$RANDOM % ${#animal[@]} ]} | lolcat'
 
 # alias
-alias als='xed ~/.bash_aliases'
+alias als='$EDITOR ~/.bash_aliases'
 alias reload='source ~/.bashrc'
 
 # ip
@@ -33,12 +33,15 @@ alias clip='copyq add -'
 # right
 alias amoi='sudo chown $USER:$USER'
 
+# firefox search
+#alias ff='nohup firefox --search'
+
 # search
 alias hg='history |grep'
 alias fhere="sudo find . -type f -name"
 
 # hosts
-alias edithost="sudo xed /etc/hosts"
+alias edithost="sudo $EDITOR /etc/hosts"
 
 # battery
 alias bat='upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"'
@@ -56,8 +59,8 @@ convertToMp4 () {
 }
 
 # speedtest
-#alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
+#alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 
 # diff
