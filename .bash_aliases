@@ -52,6 +52,7 @@ alias cancel_commit='git reset --soft HEAD~1';
 # mp3 or mp4 of youtube video
 alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 -i"
 alias yt-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -i"
+alias yt-mp4-720="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
 
 ## convert video to mp4
 convertToMp4 () {
