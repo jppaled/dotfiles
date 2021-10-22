@@ -12,7 +12,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias welcome='animal=("meow" "turtle" "stegosaurus"); fortune | cowsay -f ${animal[$RANDOM % ${#animal[@]} ]} | lolcat'
 
 # alias
-alias als='$EDITOR ~/.bash_aliases'
+alias als='xed ~/.bash_aliases'
 alias reload='source ~/.bashrc'
 
 # ip
@@ -63,6 +63,8 @@ convertToMp4 () {
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
 #alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
+# crypto
+alias coin='coinmon -f btc,eth,xmr'
 
 # diff
 alias diff='diff --color=auto'
