@@ -33,6 +33,9 @@ alias clip='copyq add -'
 # right
 alias amoi='sudo chown $USER:$USER'
 
+# chmod
+alias mx="chmod +x $1"
+
 # firefox search
 #alias ff='nohup firefox --search'
 
