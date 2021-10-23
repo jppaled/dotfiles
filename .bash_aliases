@@ -35,6 +35,7 @@ alias amoi='sudo chown $USER:$USER'
 
 # chmod
 alias mx="chmod +x $1"
+alias nmx="chmod -x $1"
 
 # chattr
 alias lock="sudo chattr +i $1"
