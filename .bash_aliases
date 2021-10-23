@@ -92,6 +92,7 @@ if [ -f $HOME/.local/bin/exa ]; then
     alias ll="exa -abghl"
     alias l="exa -bghl"
     alias la="exa -a"
+    alias lll="exa -abghl --recurse -T -L 2"
 else
     alias ll="ls -alF"
     alias l="ls -l"
