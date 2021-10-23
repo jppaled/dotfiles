@@ -87,9 +87,15 @@ alias diff='diff --color=auto'
 alias ls='ls -GFh --color=auto'
 
 # ls with exa
-alias ll="exa -abghl"
-alias l="exa -bghl"
-alias la="exa -a"
+if [ -f $HOME/.local/bin/exa ]; then
+    alias ll="exa -abghl"
+    alias l="exa -bghl"
+    alias la="exa -a"
+else
+    alias ll="ls -alF"
+    alias l="ls -l"
+    alias la="ls -a"
+fi
 
 # extract all format
 extract () {
