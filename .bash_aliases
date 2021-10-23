@@ -36,6 +36,10 @@ alias amoi='sudo chown $USER:$USER'
 # chmod
 alias mx="chmod +x $1"
 
+# chattr
+alias lock="sudo chattr +i $1"
+alias unlock="sudo chattr -i $1"
+
 # firefox search
 #alias ff='nohup firefox --search'
 
