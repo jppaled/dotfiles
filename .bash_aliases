@@ -40,6 +40,13 @@ alias mx="chmod +x $1"
 alias lock="sudo chattr +i $1"
 alias unlock="sudo chattr -i $1"
 
+function prg() {
+    echo "apt purge $2" > $HOME/dev/mintinstall/purge/$1;
+    mx $HOME/dev/mintinstall/purge/$1;
+    ll $HOME/dev/mintinstall/purge/;
+    cat $HOME/dev/mintinstall/purge/$1;
+}
+
 # firefox search
 #alias ff='nohup firefox --search'
 
