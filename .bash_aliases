@@ -81,6 +81,11 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 # crypto
 alias coin='coinmon -f btc,eth,xmr'
 
+# twitch
+function tw() {
+    mpv https://twitch.tv/$1
+}
+
 # diff
 alias diff='diff --color=auto'
 
