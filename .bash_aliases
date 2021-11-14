@@ -27,7 +27,7 @@ alias dsk='cd ~/Bureau'
 alias dox='cd ~/Documents'
 alias dev='cd ~/dev'
 
-# clip
+# clip with copyq
 alias clip='copyq add -'
 
 # right
