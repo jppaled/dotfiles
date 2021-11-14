@@ -41,6 +41,7 @@ alias nmx="chmod -x $1"
 alias lock="sudo chattr +i $1"
 alias unlock="sudo chattr -i $1"
 
+# create purge script
 function prg() {
     echo "apt purge $2" > $HOME/dev/mintinstall/scripts/purge/$1;
     mx $HOME/dev/mintinstall/scripts/purge/$1;
