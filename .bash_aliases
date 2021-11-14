@@ -9,7 +9,7 @@ alias matrixBinarie='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RAN
 alias starwars="telnet towel.blinkenlights.nl"
 
 # welcome message
-alias welcome='animal=("meow" "turtle" "stegosaurus"); fortune | cowsay -f ${animal[$RANDOM % ${#animal[@]} ]} | lolcat'
+alias welcome='fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat'
 
 # alias
 alias als='xed ~/.bash_aliases'
