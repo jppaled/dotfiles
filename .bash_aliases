@@ -76,7 +76,7 @@ convertToMp4 () {
 
 # speedtest
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
-#alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias spythontest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 # crypto
 alias coin='coinmon -f btc,eth,xmr'
