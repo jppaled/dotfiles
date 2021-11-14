@@ -153,20 +153,20 @@ function color_my_prompt {
     local fushia="\[\033[38;5;161m\]"
     local white="\e[0;97m"
 
-    local __crochet_ouvert="$red["
+    local __open_bracket="$red["
     local __user="$yellow\u"
-    local __arobase="$green@"
+    local __at="$green@"
     local __host="$blue\h"
-    local __deux_points="$blue:"
+    local __colon="$blue:"
     local __current_path="$pink\w"
-    local __crochet_fermer="$red]"
-    #local __git_branch="$(git_status_color)\$(parse_git_branch)"
+    local __close_bracket="$red]"
     local __git_branch="$green\$(parse_git_branch)"
     local __dollar="\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
+    #local __git_branch="$(git_status_color)\$(parse_git_branch)"
     #local __git_branch="$yellow$(__git_ps1)\[$(tput sgr0)\]"
 
-    export PS1="$bold$__crochet_ouvert$__user$__arobase$__host$__deux_points$__current_path$__crochet_fermer$__git_branch$__dollar"
+    export PS1="$bold$__open_bracket$__user$__at$__host$__colon$__current_path$__close_bracket$__git_branch$__dollar"
 }
 
 # rainbow ps1 with git
