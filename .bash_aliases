@@ -22,7 +22,7 @@ alias pubip='curl ifconfig.io'
 # directory
 alias ..='cd ../'
 alias www='cd /var/www'
-alias dl='cd ~/Téléchargements'
+alias dls='cd ~/Téléchargements'
 alias dsk='cd ~/Bureau'
 alias dox='cd ~/Documents'
 alias dev='cd ~/dev'
