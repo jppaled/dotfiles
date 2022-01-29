@@ -55,6 +55,8 @@ function prg() {
 # search
 alias hg='history |grep'
 alias fhere="sudo find . -type f -name"
+alias emptydir='find $HOME -type d -empty'
+alias emptydirdel='find $HOME -type d -empty -delete'
 
 # hosts
 alias edithost="sudo $EDITOR /etc/hosts"
@@ -78,6 +80,8 @@ convertToMp4 () {
 # speedtest
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
 alias spythontest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
+alias slip='systemctl suspend'
 
 # crypto
 alias coin='coinmon -f btc,eth,xmr'
