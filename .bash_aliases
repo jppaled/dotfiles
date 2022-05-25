@@ -12,7 +12,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias welcome='fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat'
 
 # alias
-alias als='xed ~/.bash_aliases'
+alias als='xed ~/.bash_aliases &'
 alias reload='source ~/.bashrc'
 
 # ip
@@ -22,10 +22,15 @@ alias pubip='curl ifconfig.io'
 # directory
 alias ..='cd ../'
 alias www='cd /var/www'
+# user directory
 alias dls='cd ~/Téléchargements'
 alias dsk='cd ~/Bureau'
 alias dox='cd ~/Documents'
+alias img='cd ¬/Images'
 alias dev='cd ~/dev'
+# nginx conf
+alias confa='cd /etc/nginx/sites-available'
+alias confe='cd /etc/nginx/sites-enabled'
 
 # clip with copyq
 alias clip='copyq add -'
@@ -41,16 +46,8 @@ alias nmx="chmod -x $1"
 alias lock="sudo chattr +i $1"
 alias unlock="sudo chattr -i $1"
 
-# create purge script
-function prg() {
-    echo "apt purge $2" > $HOME/dev/mintinstall/scripts/purge/$1;
-    mx $HOME/dev/mintinstall/scripts/purge/$1;
-    ll $HOME/dev/mintinstall/scripts/purge/;
-    cat $HOME/dev/mintinstall/scripts/purge/$1;
-}
-
-# firefox search
-#alias ff='nohup firefox --search'
+# systemctl
+alias sctl='systemctl'
 
 # search
 alias hg='history |grep'
@@ -61,16 +58,35 @@ alias emptydirdel='find $HOME -type d -empty -delete'
 # hosts
 alias edithost="sudo $EDITOR /etc/hosts"
 
+# nginx
+ngx() {
+    case "$1" in
+        stop | start | restart | reload | status ) sudo systemctl $1 nginx;;
+        log) case "$2" in
+                access | error) sudo tail -f /var/log/nginx/$2.log;;
+                *) echo "access error";;
+            esac;;
+        test) sudo nginx -t;;
+        *) echo "stop start restart reload status log";;
+    esac
+}
+
 # battery
 alias bat='upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"'
+
+# power consumption
+alias watt='powerstat -R -c -z'
+
+# cpu temp
+alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 
 # git
 alias cancel_commit='git reset --soft HEAD~1';
 
 # mp3 or mp4 of youtube video
-alias yt-mp3="youtube-dl --extract-audio --audio-format mp3 -i"
-alias yt-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -i"
-alias yt-mp4-720="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
+alias yt-mp3="yt-dlp --extract-audio --audio-format mp3 -i"
+alias yt-mp4="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -i"
+alias yt-mp4-720="yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
 
 ## convert video to mp4
 convertToMp4 () {
@@ -81,7 +97,9 @@ convertToMp4 () {
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test1000.zip"
 alias spythontest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
+# system power
 alias slip='systemctl suspend'
+alias ododo='shutdown -h now'
 
 # crypto
 alias coin='coinmon -f btc,eth,xmr'
