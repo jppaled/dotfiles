@@ -12,7 +12,12 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias welcome='fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat'
 
 # alias
-alias als='xed ~/.bash_aliases &'
+if [ -f /usr/bin/xed ]; then
+    alias als='xed ~/.bash_aliases'
+else
+    alias als='nano ~/.bash_aliases'
+fi
+
 alias reload='source ~/.bashrc'
 
 # ip
@@ -58,19 +63,6 @@ alias emptydirdel='find $HOME -type d -empty -delete'
 # hosts
 alias edithost="sudo $EDITOR /etc/hosts"
 
-# nginx
-ngx() {
-    case "$1" in
-        stop | start | restart | reload | status ) sudo systemctl $1 nginx;;
-        log) case "$2" in
-                access | error) sudo tail -f /var/log/nginx/$2.log;;
-                *) echo "access error";;
-            esac;;
-        test) sudo nginx -t;;
-        *) echo "stop start restart reload status log";;
-    esac
-}
-
 # battery
 alias bat='upower -i $(upower -e | grep BAT) | grep --color=never -E "state|to\ full|to\ empty|percentage"'
 
@@ -88,7 +80,7 @@ alias yt-mp3="yt-dlp --extract-audio --audio-format mp3 -i"
 alias yt-mp4="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -i"
 alias yt-mp4-720="yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
 
-## convert video to mp4
+# convert video to mp4
 convertToMp4 () {
  	ffmpeg -i "$1" -c:a aac -b:a 128k -c:v libx265 -crf 23 "$1".mp4
 }
@@ -112,7 +104,7 @@ alias diff='diff --color=auto'
 alias ls='ls -GFh --color=auto'
 
 # ls with exa
-if [ -f $HOME/.local/bin/exa ]; then
+if [ -f /$HOME/.local/bin/exa ] || [ -f /usr/bin/exa ]; then
     alias ll="exa -abghl"
     alias l="exa -bghl"
     alias la="exa -a"
