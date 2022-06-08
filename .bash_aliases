@@ -12,11 +12,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias welcome='fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1) | lolcat'
 
 # alias
-if [ -f /usr/bin/xed ]; then
-    alias als='xed ~/.bash_aliases'
-else
-    alias als='nano ~/.bash_aliases'
-fi
+alias als='$EDITOR ~/.bash_aliases'
 
 alias reload='source ~/.bashrc'
 
@@ -53,6 +49,7 @@ alias unlock="sudo chattr -i $1"
 
 # systemctl
 alias sctl='systemctl'
+alias fservice='cd /etc/systemd/system'
 
 # search
 alias hg='history |grep'
@@ -92,6 +89,7 @@ alias spythontest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli
 # system power
 alias slip='systemctl suspend'
 alias ododo='shutdown -h now'
+alias riboot='systemctl reboot'
 
 # crypto
 alias coin='coinmon -f btc,eth,xmr'
